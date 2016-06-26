@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--  <title><%= title %></title> -->
+    <link rel='stylesheet' href='/stylesheets/screen.css' /> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link type="text/css" rel="stylesheets" href="/stylesheets/normalize.css" />
+	<link type="text/css" rel="stylesheet" href="/stylesheets/screen.css" />
+	
+
+
+	<title>Introduction</title>
+  </head>
+  <body>
+    <div class="container">
+    	<div class="st-container">
+        	<!--nav begin-->
+        	<input type="radio" name="radio-set"  id="st-control-1" />
+            <a href="#st-panel-1">Welcome</a>
+            <input type="radio" name="radio-set" id="st-control-2" />
+            <a href="#st-panel-2"><strong>Little Storys</strong></a>
+            <input type="radio" name="radio-set"  checked="checked" id="st-control-3" />
+            <a href="#st-panel-3">Play me</a>
+            <input type="radio" name="radio-set" id="st-control-4" />
+            <a href="#st-panel-4">For fun</a>
+            <input type="radio" name="radio-set"  id="st-control-5" />
+            <a href="#st-panel-5">About me</a>
+            <!--nav ends-->
+        
+            <div class="st-scroll">
+                    <section class="st-panel" id="st-panel-1">
+                        <div class="st-desc" data-icon="U"></div>
+                        <h1>Hello There !</h1>
+                        <p>this is a simple project to show various area of front-end related skills.</p>
+                    </section>
+                    <section class="st-panel st-color" id="st-panel-2">
+                        <div class="st-desc" data-icon="2"></div>
+                        <h1>Little Storys</h1>
+                        <p>this is a simple project to show various area of front-end related skills.</p>
+                    </section>
+                    <section class="st-panel" id="st-panel-3">
+                        <div class="st-desc" data-icon="r"></div>
+                        <div id="musicName"><p id="child">Hello there</p></div>
+                        <div class="left">
+                        	<ul id="list">
+                        		<% music.forEach(function(name){ %>
+                        			<li title="<%= name %>" type="audio" id="kassey"><%= name %></li>
+                        		<% }) %>
+                        	</ul>
+                        </div>
+                        <div class="right">
+                            
+                            <input type="button" id='play' onclick="playB()" value='play'>
+                            <p><input type="range" id="volume" min="0" max="100" value="60"><!-- <input type="button" class="playstop"> --></p>
+                            <div id="box">
+                                <canvas id='canvas'></canvas>
+                                <canvas id='mirror'></canvas>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="st-panel st-color" id="st-panel-4">
+                        <div class="st-desc" data-icon="N"></div>
+                        <div class="wrap" id="wrap">
+                            <div class="photo photo-front" onclick="turn(this)" id="photo_{{index}}"><!-- move & rotate photo -->
+                                <div class="photo-wrap"><!-- overturn photo -->
+                                    <div class="side side-front">
+                                        <p class="image"><img src="images/{{img}}" /></p>
+                                        <p class="caption">{{caption}}</p>
+                                    </div>
+                                    <div class="side side-back">
+                                        <p class="description">{{desc}}</p>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </section>
+                    <section class="st-panel" id="st-panel-5">
+                        <!-- <div class="st-desc" data-icon="H"></div>
+                        <h1>JQuery</h1>
+                        <p>this is a simple project to show various area of front-end related skills.</p> -->
+                        
+                        <div class="wrap2">
+                            <header>
+                                <nav>
+                                    <div class="nav">
+                                        <div class="logo"><a href="#">kassey liu</a></div>
+                                        <ul id="navList">
+                                            <li class="lg" id="home"><a href="#">Home</a></li>
+                                            <li class="lg"><a href="#">Summary</a></li>
+                                            <li class="lg"><a href="#">Qualifications</a></li>
+                                            <li class="lg"><a href="#">Projects</a></li>
+                                        </ul>
+                                    </div>   
+                                </nav>
+                                <div id="banner">
+                                    <div class="inner">
+                                        <h1>Kassey Liu</h1>
+                                        <p>Master’s student with strong motivation, enthusiasm and problem solving ability in software technology. Hands-on experience in Java, HTML, CSS, JavaScript and Python development. Pursuing a full-time web developer position to apply programming skills.</p>
+                                        <!-- <button>Click Me</button> -->
+                                        <div class="more">
+                                            more
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="aboutmeContent">
+                                <section class="green">
+                                    <div class="wrapper">
+                                        <div>
+                                            <h2>Summary</h2>
+                                            <div class="hr"></div>
+                                            <p>HTML5 &nbsp;&nbsp; CSS3 &nbsp;&nbsp; JavaScript&nbsp;&nbsp; JQuery  &nbsp;&nbsp; Java &nbsp;&nbsp;Sass/Compass&nbsp;&nbsp;Python  􏰀<br> MAC&nbsp;&nbsp; Windows&nbsp;&nbsp; Linux&nbsp;&nbsp; 􏰀 <br> MySQL &nbsp;&nbsp;SQL Server &nbsp;&nbsp;Oracle 􏰀<br> Dreamweaver&nbsp;&nbsp; Eclipse&nbsp;&nbsp; Chrome &nbsp;&nbsp;Sublime </p>
+                                        </div>
+                                        <div class="icon-grounp">
+                                            <span class="icon">item1</span>
+                                            <span class="icon">item1</span>
+                                            <span class="icon">item1</span>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="blue">
+                                    <div class="skills skills1">
+                                        <div class="img"><img src="images/me2.jpg"></div>
+                                        <div class="con">
+                                            <h3>Strong Knowledge</h3>
+                                            <ul>
+                                                <li>2 years experience in J2EE and Java web development technologies: HTML, CSS, JavaScript;</li>
+                                                <li>2 years experience in database (SQL server, MySQL, Oracle) development;</li>
+                                                <li>2+ years experience in Java software development;</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="skills skills2">
+                                        <div class="img"><img src="images/me1.jpg"></div>
+                                        <div class="con">
+                                            <h3>Less Strong</h3>
+                                            <ul>
+                                                <li>Experience in version control system: GitHub, Bitbucket;</li>
+                                                <li>1 year experience in Sass/Compass development;</li>
+                                                <li>Strong knowledge of data structures and algorithms, object oriented design, software architecture,UML, 􏰀software design and lifecycles;</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="skills skills3">
+                                        <div class="img"><img src="images/me3.jpg"></div>
+                                        <div class="con">
+                                            <h3>Falimar</h3>
+                                            <ul>
+                                                <li>Entry level in Python and flask web framework;</li>
+                                                <li>Familiar with MVC (Struts);</li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="purple">
+                                    <div class="head-wrapper">
+                                        <h2>PROJECTS</h2>
+                                        <div class="hr"></div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-grounp" id="card1">
+                                            <h2>Website Application for Hospital Employees (JAVA & MySQL)</h2>
+                                            <h4>Group Project</h4>
+                                            <ul>
+                                                <li>Designed a computer system that helps a hospital with doctors and nurses manage their patient’s records, tests, appointments, related reports and data</li>
+                                                <li>Designed the system under J2EE and MySQL environment</li>
+                                                <li>Built UML model using Visio (according to requirements)</li>
+                                                <li>Organized meetings weekly to check the completion of each stage</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-grounp" id="card2">
+                                             <h2>Hotel Registration API Application (ASP.NET & SQL Server)</h2>
+                                            <h4>Group Project</h4>
+                                            <ul>
+                                                <li>Organized hotel database and update data on system</li>
+                                                <li>Managing current booking data and handling new booking querys</li>
+                                                <li>Built database based on ER model</li>
+                                                <li>Maintain the system: add and fix features</li>
+                                                <li>Updating and optimize the database</li>
+                                                <li>Cooperated with team members to complete each stage of the design, learned to work as a team</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-grounp" id="card3">
+                                             <h2>Automated Bug Detection Tool (JAVA & Linux)</h2>
+                                            <h4>Individual Project</h4>
+                                            <ul>
+                                                <li>Using likely-invariants from call graph (method learned in class) to automatically detect software bugs.</li>
+                                                <li>Understood and generate call graph from input</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-grounp" id="card4">
+                                             <h2>Locating Traffic Cameras System (Python & C)</h2>
+                                            <h4>Individual Project</h4>
+                                            <ul>
+                                                <li>Aimed to help police department with the installation of security cameras at traffic intersections</li>
+                                                <li>Solved a particular kind of optimization problem, called the Vertex Cover problem</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-grounp" id="card5">
+                                             <h2>Android Application (JAVA & SQL Server)</h2>
+                                            <h4>Individual Project</h4>
+                                            <ul>
+                                                <li>A Multiple-Choice Timed Quiz Application</li>
+                                                <li>An Instant Message Application</li>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="card-grounp" id="card6">
+                                             <h2>My personal Website Introduction (HTML5, CSS3 & JavaScript )</h2>
+                                            <h4>Individual Project</h4>
+                                            <ul>
+                                                <li>Design a simple website page to utilize HTML5, CSS3, JavaScript</li>
+                                                <li>Link: https://github.com/zeyaliu/nail-web.git</li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </section>
+                            </div>
+                            <footer>
+                                <div class="split">
+                                    <h3>EDUCATION</h3>
+                                    <table>
+                                        <tr><td class='td1'>University of Waterloo – Waterloo, ON</td>
+                                            <td class='td2'>Master. Electrical and Computer Engineering (Software Engineering stream)<br> June 2016</td></tr>
+                                        <tr><td class='td1'>University of Waterloo – Waterloo, ON</td><td class='td2'>Department Graduate Diploma in Software Engineering<br>Completed: December 2015</td></tr>
+                                    </table>
+                                </div>
+                                <div class="share">
+                                    <ul>
+                                        <li>item1</li>
+                                        <li>item1</li>
+                                        <li>item1</li>
+                                        <li>item1</li>
+                                        <li>item1</li>
+                                    </ul>
+                                    <div class="copy">
+                                        &copy Kassey Liu
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                        
+                    </section>  
+            </div> 
+        </div>
+    </div>
+    <script src="/javascripts/jquery-1.12.4.js" type="text/javascript"></script>
+	<script src="/images/data.js" type="text/javascript"></script>
+	<script src="/javascripts/page4.js" type="text/javascript"></script>
+	<script src="/javascripts/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+       
+        
+
+        
+        //output all photoes
+        var data=data;
+        function addPhotoes(){
+            var template=g("#wrap").innerHTML;
+            var html=[];
+            var nav=[];
+            for(var s=0; s<data.length;s++){
+                var _html=template
+                                .replace('{{index}}',s)
+                                .replace('{{img}}',data[s].img)
+                                .replace('{{caption}}',data[s].caption)
+                                .replace('{{desc}}',data[s].desc);
+                html.push(_html);
+                nav.push('<span id="nav_'+s+'" onclick="turn(g(\'#photo_'+s+'\'))" class="i">&nbsp;</span>');
+            }
+            html.push('<div class="nav">'+nav.join('')+'</div>');
+            g("#wrap").innerHTML=html.join("");
+            rsort(random([-1,data.length-1]));
+        }
+        addPhotoes();
+
+        //make div width equals height dynamically
+        // var cw = $(".icon").width();
+        // $(".icon").css({'height':cw+'px'});
+        // $(window).resize(function() {
+        //         var cw = $(".icon").width();
+        //         $(".icon").css({'height':cw+'px'});
+        // }); 
+
+    </script>
+</body>
+</html>
+
